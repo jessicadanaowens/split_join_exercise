@@ -9,31 +9,66 @@ long_string = <<-world_cup_news
 world_cup_news
 
 # enter your solutions inside the methods
-def goal(message)
+def goal(goal_message)
+  p goal_message * 2
 
 end
 
-def generate_an_array_of_teams(teams)
+def generate_an_array_of_teams(team_list)
+
+  array = []
+
+  (team_list.split(', ')).each do |team|
+    array.push(team)
+  end
+
+  p array
 
 end
 
-def number_of_teams(teams)
+def number_of_teams(team_list)
+  array = []
+
+  (team_list.split(', ')).each do |team|
+    array.push(team)
+  end
+
+  p array.length
+
 
 end
 
-def return_australia(teams)
+def return_australia(team_list)
+
+p (team_list.split(', '))[6]
 
 end
 
-def starts_with_C(teams)
+def starts_with_C(team_list)
+  array = []
+
+  (team_list.split(', ')).each do |team|
+    array.push(team)
+  end
+
+  newarray = []
+
+  array.each do |team|
+    if team[0] == 'C'
+      newarray << team
+    end
+  end
+  p newarray
 
 end
 
-def block_string_to_single_line(block_string)
-
+def block_string_to_single_line(long_string)
+  single_line = long_string.gsub
+  p single_line
 end
 
-def capitalize_every_third_word(block_string)
+def capitalize_every_third_word(long_string)
+  
 
 end
 
