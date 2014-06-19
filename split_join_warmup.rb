@@ -63,14 +63,29 @@ def starts_with_C(team_list)
 end
 
 def block_string_to_single_line(long_string)
-  single_line = long_string.gsub
-  p single_line
+ p long_string.split(' ').join(' ').split(',').join('')
 end
+
 
 def capitalize_every_third_word(long_string)
-  
+
+  p array = long_string.downcase.split(' ').join.split(',')
+
+  new_array = []
+
+  array.each_with_index do |word, index|
+
+    if index % 3 == 0
+      new_array.push(word.capitalize)
+    else
+      new_array.push(word)
+    end
+  end
+
+  p new_array.join(' ')
 
 end
+
 
 check("goal method", goal(goal_message) == "GOOOOOOOAL!!!!GOOOOOOOAL!!!!")
 check("generate_an_array_of_teams method",
